@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+  <script src="index.js" defer></script>
+  <style>
+		@font-face {
+			font-family: HankenGrotesk;
+			src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+		}
+    :root {
+      font-size: 18px;
+    }
+		* {
+			font-family: HankenGrotesk;
+			margin: 0;
+			padding: 0;
+      font-size: 18px;
+			box-sizing: border-box;
+			/* primary colors */
+			--lightRed: hsl(0, 100%, 67%);
+			--orangeyYellow: hsl(39, 100%, 56%);
+			--greenTeal: hsl(166, 100%, 37%);
+			--cobaltBlue: hsl(234, 85%, 45%);
+			/* gradients */
+			--slateBlue: hsl(252, 100%, 67%);
+			--royalBlue: hsl(241, 81%, 54%);
+			--violetBlue: hsla(256, 72%, 46%, 1);
+			--persianBlue: hsla(241, 72%, 46%, 0);
+			/* neutral */
+			--white: hsl(0, 0%, 100%);
+			--paleBlue: hsl(221, 100%, 96%);
+			--lightLavender: hsl(241, 100%, 89%);
+			--darkGrayBlue: hsl(224, 30%, 27%);
+		}
+    .grayText {
+      color: gray;
+    }
+    h1 {
+      font-size: 1.25rem;
+    }
+		.mainContainer {
+			display: grid;
+			height: 100vh;
+			place-items: center;
+			background-color: var(--white);
+		}
+		.mainComponent {
+      border-radius: 2rem;
+      font-size: 18px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 600px;
+		}
+		.resultComponent {
+			background: linear-gradient(var(--slateBlue), var(--royalBlue));
+			border-radius: 2rem;
+		}
+		.first {
+			height: 60%;
+		}
+		.summaryComponent {
+      padding: 1rem;
+		}
+		.resultComponent > div:first-of-type {
+			height: 60%;
+		}
+    .resultComponent h1 {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      color: var(--lightLavender);
+    }
+    .scoreResult {
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      background-color: black;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background: linear-gradient(var(--violetBlue), var(--persianBlue));
+    }
+    .scoreResult h1, p {
+      color: var(--lightLavender);
+      text-align: center;
+      margin: 0;
+    }
+    .summaryComponent h1 {
+      margin-bottom: 1.5rem;
+    }
+    .scoreResult h1 {
+      font-size: 50px;
+      color: var(--white);
+    }
+    .percentageReport {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 2rem;
+    }
+    .subjectScore {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background: var(--paleBlue);
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .scoreOutOf {
+      float: right;
+    }
+    img {
+      vertical-align: middle;
+    }
+    .scoreTitleReaction {
+      color: var(--lightRed);
+    }
+    .scoreTitleMemory {
+      color: var(--orangeyYellow);
+    }
+
+    .scoreTitleVerbal {
+      color: var(--greenTeal);
+    }
+    .scoreTitleVisual {
+      color: var(--cobaltBlue);
+    }
+    .scoreObtainedPerSubject {
+      font-weight: bold;
+    }
+    .myButton {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      border: none;
+      color: var(--white);
+      padding: 0.75rem;
+      background-color: var(--darkGrayBlue);
+      border-radius: 25px;
+      text-align: center;
+    }
+    .myButton:hover {
+      cursor: pointer;
+      background: linear-gradient(var(--slateBlue), var(--royalBlue));
+    }
+    @media screen and (max-width: 600px) {
+      .mainComponent {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .myButton {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+	<main>
+		<div class="mainContainer">
+			<div class="mainComponent">
+				<div class="resultComponent">
+					<div>
+						<h1>Your Result</h1>
+            <div class="scoreResult">
+              <div>
+                <h1 id="scoreObtained"> 76 </h1>
+                <p>of 100</p>
+              </div>
+            </div>
+					</div>
+					<div class="percentageReport">
+            <h1> Great </h1>
+            <p> You scored higher than 65% of the people who have taken these tests. </p>
+					</div>
+				</div>
+				<div class="summaryComponent">
+          <div>
+            <h1>Summary</h1>
+            <div class="subjectScore">
+              <img alt="subjectImage" />
+              <span class="scoreTitle"></span>
+              <span class="scoreOutOf">
+                <span class="scoreObtainedPerSubject">80</span>
+                <span class="grayText">/</span>
+                <span class="grayText">100</span>
+              </span>
+            </div>
+            <div class="subjectScore">
+              <img alt="subjectImage" />
+              <span class="scoreTitle"></span>
+              <span class="scoreOutOf">
+                <span class="scoreObtainedPerSubject">92</span>
+                <span class="grayText">/</span>
+                <span class="grayText">100</span>
+              </span>
+            </div>
+            <div class="subjectScore">
+              <img alt="subjectImage" />
+              <span class="scoreTitle"></span>
+              <span class="scoreOutOf">
+                <span class="scoreObtainedPerSubject">61</span>
+                <span class="grayText">/</span>
+                <span class="grayText">100</span>
+              </span>
+            </div>
+            <div class="subjectScore">
+              <img alt="subjectImage" />
+              <span class="scoreTitle"></span>
+              <span class="scoreOutOf">
+                <span class="scoreObtainedPerSubject">72</span>
+                <span class="grayText">/</span>
+                <span class="grayText">100</span>
+              </span>
+            </div>
+            <button class="myButton"> Continue </button>
+          </div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
