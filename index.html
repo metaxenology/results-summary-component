@@ -9,67 +9,67 @@
   <title>Frontend Mentor | Results summary component</title>
   <script src="index.js" defer></script>
   <style>
-		@font-face {
-			font-family: HankenGrotesk;
-			src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
-		}
+    @font-face {
+      font-family: HankenGrotesk;
+      src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+    }
     :root {
       font-size: 18px;
     }
-		* {
-			font-family: HankenGrotesk;
-			margin: 0;
-			padding: 0;
+    * {
+      font-family: HankenGrotesk;
+      margin: 0;
+      padding: 0;
       font-size: 18px;
-			box-sizing: border-box;
-			/* primary colors */
-			--lightRed: hsl(0, 100%, 67%);
-			--orangeyYellow: hsl(39, 100%, 56%);
-			--greenTeal: hsl(166, 100%, 37%);
-			--cobaltBlue: hsl(234, 85%, 45%);
-			/* gradients */
-			--slateBlue: hsl(252, 100%, 67%);
-			--royalBlue: hsl(241, 81%, 54%);
-			--violetBlue: hsla(256, 72%, 46%, 1);
-			--persianBlue: hsla(241, 72%, 46%, 0);
-			/* neutral */
-			--white: hsl(0, 0%, 100%);
-			--paleBlue: hsl(221, 100%, 96%);
-			--lightLavender: hsl(241, 100%, 89%);
-			--darkGrayBlue: hsl(224, 30%, 27%);
-		}
+      box-sizing: border-box;
+      /* primary colors */
+      --lightRed: hsl(0, 100%, 67%);
+      --orangeyYellow: hsl(39, 100%, 56%);
+      --greenTeal: hsl(166, 100%, 37%);
+      --cobaltBlue: hsl(234, 85%, 45%);
+      /* gradients */
+      --slateBlue: hsl(252, 100%, 67%);
+      --royalBlue: hsl(241, 81%, 54%);
+      --violetBlue: hsla(256, 72%, 46%, 1);
+      --persianBlue: hsla(241, 72%, 46%, 0);
+      /* neutral */
+      --white: hsl(0, 0%, 100%);
+      --paleBlue: hsl(221, 100%, 96%);
+      --lightLavender: hsl(241, 100%, 89%);
+      --darkGrayBlue: hsl(224, 30%, 27%);
+    }
     .grayText {
       color: gray;
     }
     h1 {
       font-size: 1.25rem;
     }
-		.mainContainer {
-			display: grid;
-			height: 100vh;
-			place-items: center;
-			background-color: var(--white);
-		}
-		.mainComponent {
+    .mainContainer {
+      display: grid;
+      height: 100vh;
+      place-items: center;
+      background-color: var(--white);
+    }
+    .mainComponent {
       border-radius: 2rem;
       font-size: 18px;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			width: 600px;
-		}
-		.resultComponent {
-			background: linear-gradient(var(--slateBlue), var(--royalBlue));
-			border-radius: 2rem;
-		}
-		.first {
-			height: 60%;
-		}
-		.summaryComponent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 600px;
+    }
+    .resultComponent {
+      background: linear-gradient(var(--slateBlue), var(--royalBlue));
+      border-radius: 2rem;
+    }
+    .first {
+      height: 60%;
+    }
+    .summaryComponent {
       padding: 1rem;
-		}
-		.resultComponent > div:first-of-type {
-			height: 60%;
-		}
+    }
+    .resultComponent > div:first-of-type {
+      height: 60%;
+    }
     .resultComponent h1 {
       font-size: 1.25rem;
       text-align: center;
@@ -162,25 +162,25 @@
   </style>
 </head>
 <body>
-	<main>
-		<div class="mainContainer">
-			<div class="mainComponent">
-				<div class="resultComponent">
-					<div>
-						<h1>Your Result</h1>
+  <main>
+    <div class="mainContainer">
+      <div class="mainComponent">
+        <div class="resultComponent">
+          <div>
+            <h1>Your Result</h1>
             <div class="scoreResult">
               <div>
                 <h1 id="scoreObtained"> 76 </h1>
                 <p>of 100</p>
               </div>
             </div>
-					</div>
-					<div class="percentageReport">
+          </div>
+          <div class="percentageReport">
             <h1> Great </h1>
             <p> You scored higher than 65% of the people who have taken these tests. </p>
-					</div>
-				</div>
-				<div class="summaryComponent">
+          </div>
+        </div>
+        <div class="summaryComponent">
           <div>
             <h1>Summary</h1>
             <div class="subjectScore">
@@ -221,9 +221,9 @@
             </div>
             <button class="myButton"> Continue </button>
           </div>
-				</div>
-			</div>
-		</div>
-	</main>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
